@@ -1,0 +1,93 @@
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "Vikas",
+  "lastName": "Author",
+  "email": "vikas.author@example.com",
+  "password": "Author@12345",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+
+### Author Register
+POST http://localhost:4000/author-api/users
+Content-Type: application/json
+
+{
+  "firstName": "test",
+  "lastName": "Author",
+  "email": "test.author@example.com",
+  "password": "testauthor",
+  "profileImageUrl": "https://example.com/avatars/author.png"
+}
+
+### Author Login
+POST http://localhost:4000/common-api/login
+Content-Type: application/json
+
+{
+  "email": "vikas.author@example.com",
+  "password": "Author@12345"
+  
+}
+
+
+
+### Create article (AUTHOR)
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"6989799b7013502767d3f82b",
+  "title":"test2 article",
+  "category":"programming",
+  "content":"content of test2 article"
+}
+
+
+
+###Read articles of an author
+GET http://localhost:4000/author-api/articles/698965b85a08a6721a29ef61
+
+
+
+### Update article (AUTHOR)
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+  "author":"6989799b7013502767d3f82b",
+  "articleId":"698981d2b54ba14743e2e94a",
+  "title":"test2 article updated",
+  "category":"programming",
+  "content":"content of test2 article updated"
+}
+
+
+
+### Delete article
+PATCH http://localhost:4000/author-api/articles/6989750220ce5bf826ec4f7e/status
+Content-Type: application/json
+
+{ "isArticleActive": true }
+
+
+### Logout
+GET http://localhost:4000/common-api/logout
+
+
+
+
+
+### Change password
+PUT http://localhost:4000/common-api/change-password
+Content-Type: application/json
+
+{
+  "email":"test@example.com",
+  "currentPassword":"test",
+  "newPassword":"test1"
+  
+}
